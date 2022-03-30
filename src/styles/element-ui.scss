@@ -1,0 +1,43 @@
+// 覆盖element-ui样式的全局css
+@import "element-ui__el-form";
+@import "element-ui__el-radio_el-checkbox";
+@import "element-ui__el-table";
+
+// container布局
+.el-header, .el-main, .el-footer {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// to fixed https://github.com/ElemeFE/element/issues/2461
+.el-dialog {
+  transform: none;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+  .el-dialog__body {
+    padding: 10px 20px;
+  }
+}
+
+// 自定义抽屉样式
+.custom-drawer {
+  overflow-x: hidden;
+  .el-drawer__header {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .el-drawer__body {
+    padding: 0 20px 10px 20px;
+    height: calc(100% - 56px);
+  }
+  .no-padding {
+    padding: 0;
+  }
+}
+
+.el-menu-switch-tabs > .el-tabs__header .el-tabs__item.is-active.is-closable .el-icon-close,
+.el-menu-switch-tabs > .el-tabs__header .el-tabs__item.is-closable:hover .el-icon-close {
+  margin-right: 3px !important;
+}

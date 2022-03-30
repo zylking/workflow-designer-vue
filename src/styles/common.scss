@@ -1,0 +1,456 @@
+@import "./mixin";
+
+// margin, padding
+.mg0 {
+  @include margin();
+}
+
+.pd0 {
+  @include padding();
+}
+
+// margin-top
+.mt2 {
+  @include margin($top: 2px);
+}
+
+.mt4 {
+  @include margin($top: 4px);
+}
+
+.mt6 {
+  @include margin($top: 6px);
+}
+
+.mt8 {
+  @include margin($top: 8px);
+}
+
+.mt10 {
+  @include margin($top: 10px);
+}
+
+.mt12 {
+  @include margin($top: 12px);
+}
+
+.mt14 {
+  @include margin($top: 14px);
+}
+
+.mt16 {
+  @include margin($top: 16px);
+}
+
+.mt18 {
+  @include margin($top: 18px);
+}
+
+.mt20 {
+  @include margin($top: 20px);
+}
+
+// margin-bottom
+.mb2 {
+  @include margin($bottom: 2px);
+}
+
+.mb4 {
+  @include margin($bottom: 4px);
+}
+
+.mb6 {
+  @include margin($bottom: 6px);
+}
+
+.mb8 {
+  @include margin($bottom: 8px);
+}
+
+.mb10 {
+  @include margin($bottom: 10px);
+}
+
+.mb12 {
+  @include margin($bottom: 12px);
+}
+
+.mb14 {
+  @include margin($bottom: 14px);
+}
+
+.mb16 {
+  @include margin($bottom: 16px);
+}
+
+.mb18 {
+  @include margin($bottom: 18px);
+}
+
+.mb20 {
+  @include margin($bottom: 20px);
+}
+
+// margin-left
+.ml2 {
+  @include margin($left: 2px);
+}
+
+.ml4 {
+  @include margin($left: 4px);
+}
+
+.ml6 {
+  @include margin($left: 6px);
+}
+
+.ml8 {
+  @include margin($left: 8px);
+}
+
+.ml10 {
+  @include margin($left: 10px);
+}
+
+.ml12 {
+  @include margin($left: 12px);
+}
+
+.ml14 {
+  @include margin($left: 14px);
+}
+
+.ml16 {
+  @include margin($left: 16px);
+}
+
+.ml18 {
+  @include margin($left: 18px);
+}
+
+.ml20 {
+  @include margin($left: 20px);
+}
+
+// margin-right
+.mr2 {
+  @include margin($right: 2px);
+}
+
+.mr4 {
+  @include margin($right: 4px);
+}
+
+.mr6 {
+  @include margin($right: 6px);
+}
+
+.mr8 {
+  @include margin($right: 8px);
+}
+
+.mr10 {
+  @include margin($right: 10px);
+}
+
+.mr12 {
+  @include margin($right: 12px);
+}
+
+.mr14 {
+  @include margin($right: 14px);
+}
+
+.mr16 {
+  @include margin($right: 16px);
+}
+
+.mr18 {
+  @include margin($right: 18px);
+}
+
+.mr20 {
+  @include margin($right: 20px);
+}
+
+// padding-top
+.pt2 {
+  @include padding($top: 2px);
+}
+
+.pt4 {
+  @include padding($top: 4px);
+}
+
+.pt6 {
+  @include padding($top: 6px);
+}
+
+.pt8 {
+  @include padding($top: 8px);
+}
+
+.pt10 {
+  @include padding($top: 10px);
+}
+
+.pt12 {
+  @include padding($top: 12px);
+}
+
+.pt14 {
+  @include padding($top: 14px);
+}
+
+.pt16 {
+  @include padding($top: 16px);
+}
+
+.pt18 {
+  @include padding($top: 18px);
+}
+
+.pt20 {
+  @include padding($top: 20px);
+}
+
+// padding-bottom
+.pb2 {
+  @include padding($bottom: 2px);
+}
+
+.pb4 {
+  @include padding($bottom: 4px);
+}
+
+.pb6 {
+  @include padding($bottom: 6px);
+}
+
+.pb8 {
+  @include padding($bottom: 8px);
+}
+
+.pb10 {
+  @include padding($bottom: 10px);
+}
+
+.pb12 {
+  @include padding($bottom: 12px);
+}
+
+.pb14 {
+  @include padding($bottom: 14px);
+}
+
+.pb16 {
+  @include padding($bottom: 16px);
+}
+
+.pb18 {
+  @include padding($bottom: 18px);
+}
+
+.pb20 {
+  @include padding($bottom: 20px);
+}
+
+// padding-left
+.pl2 {
+  @include padding($left: 2px);
+}
+
+.pl4 {
+  @include padding($left: 4px);
+}
+
+.pl6 {
+  @include padding($left: 6px);
+}
+
+.pl8 {
+  @include padding($left: 8px);
+}
+
+.pl10 {
+  @include padding($left: 10px);
+}
+
+.pl12 {
+  @include padding($left: 12px);
+}
+
+.pl14 {
+  @include padding($left: 14px);
+}
+
+.pl16 {
+  @include padding($left: 16px);
+}
+
+.pl18 {
+  @include padding($left: 18px);
+}
+
+.pl20 {
+  @include padding($left: 20px);
+}
+
+// padding-right
+.pr2 {
+  @include padding($right: 2px);
+}
+
+.pr4 {
+  @include padding($right: 4px);
+}
+
+.pr6 {
+  @include padding($right: 6px);
+}
+
+.pr8 {
+  @include padding($right: 8px);
+}
+
+.pr10 {
+  @include padding($right: 10px);
+}
+
+.pr12 {
+  @include padding($right: 12px);
+}
+
+.pr14 {
+  @include padding($right: 14px);
+}
+
+.pr16 {
+  @include padding($right: 16px);
+}
+
+.pr18 {
+  @include padding($right: 18px);
+}
+
+.pr20 {
+  @include padding($right: 20px);
+}
+
+// font-size
+.ft12 {
+  font-size: $extraSmall;
+}
+
+.ft13 {
+  font-size: $smallSize;
+}
+
+.ft14 {
+  font-size: $baseSize;
+}
+
+.ft16 {
+  font-size: $mediumSize;
+}
+
+.ft18 {
+  font-size: $largeSize;
+}
+
+.ft20 {
+  font-size: $extraLarge;
+}
+
+.ft26 {
+  font-size: 26px;
+}
+
+// font-weight
+.ftw-b {
+  font-weight: bold;
+}
+
+// text-align
+.tl-r {
+  text-align: right;
+}
+
+.tl-l {
+  text-align: left;
+}
+
+.tl-c {
+  text-align: center;
+}
+
+// text-indent
+.ti-0 {
+  text-indent: 0;
+}
+
+.ti-28 {
+  text-indent: 28px;
+}
+
+.ti-56 {
+  text-indent: 56px;
+}
+
+// width
+.w-50 {
+  width: 50px !important;
+}
+
+.w-100 {
+  width: 100px !important;
+}
+
+.w-120 {
+  width: 120px !important;
+}
+
+.w-150 {
+  width: 150px !important;
+}
+
+.w-186 {
+  width: 186px !important;
+}
+
+.w-200 {
+  width: 200px !important;
+}
+
+.w-250 {
+  width: 250px !important;
+}
+
+.w-300 {
+  width: 300px !important;
+}
+
+// user-select
+.select-none {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// display: inline-block
+.dis-lb {
+  display: inline-block;
+}
+
+// 文字书写方向-竖向
+.writing-mode {
+  writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: vertical-lr;
+}
+
+// div强制不换行
+.div-nowrap {
+  white-space: nowrap;
+}

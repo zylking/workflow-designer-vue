@@ -1,0 +1,40 @@
+// 左侧菜单栏sidebar变量
+$menuText: #303133;
+$menuActiveText: #FF8F1F;
+$subMenuActiveText: #303133; // https://github.com/ElemeFE/element/issues/12951
+
+$menuBg: #FFFFFF;
+$menuHover: #FFFFFF;
+
+$subMenuBg: #F8F8F8;
+$subMenuHover: #FEF9F6;
+$subMenuHoverText: #FF8F1F;
+
+$sideBarWidth: 188px;
+
+// element 字号
+$extraSmall: 12px;  // 辅助文字
+$smallSize: 13px;   // 正文(小)
+$baseSize: 14px;    // 正文
+$mediumSize: 16px;  // 小标题
+$largeSize: 18px;   // 标题
+$extraLarge: 20px;  // 主标题
+
+// element 颜色
+$basicColor: #303133;
+$introColor: #606266;
+$lightColor: #909399;
+$mainColor: #409EFF;
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+}

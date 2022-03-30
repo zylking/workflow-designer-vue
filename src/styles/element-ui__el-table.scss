@@ -1,0 +1,56 @@
+// el-table相关的公共样式
+// 1、针对列表表格需要点击时，将鼠标指针变成小手样式
+// 2、针对需要进行浏览器打印的表格边框颜色、字体颜色 #333333 加深
+// 3、针对表格show-overflow-tooltip，限制最大的宽度为700px
+
+.el-table {
+  td, th {
+    padding: 4px 0;
+  }
+  td {
+    // 按钮间隔4px
+    .el-button + .el-button {
+      margin-left: 4px;
+    }
+    // 表格列文字按钮padding = 0
+    .el-button--text {
+      padding: 0;
+    }
+  }
+
+  // 1、针对列表表格需要点击时，将鼠标指针变成小手样式
+  &.el-table__cursor .el-table__body-wrapper tr {
+    cursor: pointer;
+  }
+  // 2、针对需要进行浏览器打印的表格边框颜色、字体颜色 #333333 加深
+  &.el-table__printer {
+    color: #333333;
+    border-color: #333333;
+    thead {
+      color: #333333;
+      &.is-group th {
+        background-color: #ffffff;
+      }
+    }
+    th.is-leaf {
+      border-bottom: 1px solid #333333;
+    }
+    td, th, .el-table__body-wrapper .el-table--border.is-scrolling-left ~ .el-table__fixed {
+      border-right: 1px solid #333333;
+    }
+    td, th, th.is-leaf, .el-table__fixed-right-patch {
+      border-bottom: 1px solid #333333;
+    }
+    .el-table__empty-text {
+      color: #333333;
+    }
+    &::after, &::before {
+      background-color: #333333;
+    }
+  }
+}
+
+// 3、针对表格show-overflow-tooltip
+.el-tooltip__popper {
+  max-width: 700px;
+}

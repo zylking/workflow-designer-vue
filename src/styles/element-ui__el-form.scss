@@ -1,0 +1,43 @@
+// el-form相关的公共样式
+// 1、更改必填项label颜色为element的默认主题蓝色
+// 2、去掉表单label的padding
+// 3、取消表单的margin
+// 4、不显示错误信息
+// 5、自定义必填项，可以作用在任何没有必填项的元素上
+
+.el-form {
+  // 1、更改必填项label颜色为element的默认主题蓝色
+  &.required {
+    .el-form-item.is-required > .el-form-item__label {
+      color: #409EFF;
+    }
+  }
+  // 2、去掉表单label的padding
+  &.no-padding {
+    .el-form-item__label {
+      padding: 0;
+    }
+  }
+  // 3、取消表单的margin
+  &.no-margin {
+    .el-form-item {
+      margin-bottom: 0;
+    }
+  }
+  // 4、不显示错误信息
+  &.no-error {
+    .el-form-item__error {
+      display: none;
+    }
+  }
+}
+
+// 5、自定义必填项，可以作用在任何元素上
+.custom-required {
+  color: #409EFF;
+  &:before {
+    content: '*';
+    color: #F56C6C;
+    margin-right: 4px;
+  }
+}

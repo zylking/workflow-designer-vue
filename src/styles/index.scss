@@ -1,0 +1,72 @@
+@import "transition.scss";
+@import "element-ui.scss";
+@import "common.scss";
+@import "mixin.scss";
+
+body {
+  height: 100%;
+  font-size: $baseSize;
+  color: $basicColor;
+  // font-smoothing 针对图标字体进行抗锯齿 非标准的css定义
+  // webkit 有3个属性：none-对低像素的文本比较好 subpixel-antialiased-默认值 antialiased-抗锯齿很好
+  // Gecko inherit | grayscale
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // CSS 属性定义浏览器渲染引擎如何渲染字体。浏览器会在速度、清晰度、几何精度之间进行权衡。
+  text-rendering: optimizeLegibility;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app, .percentage {
+  height: 100%;
+}
+
+#app {
+  min-width: 1366px;
+  .app-wrapper {
+    @include relative;
+    @include clearFix;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+// chrome 滚动条样式
+::-webkit-scrollbar {
+  width: 4px;
+  height: 8px
+}
+
+::-webkit-scrollbar-thumb {
+  width: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #C1C1C1;
+}
