@@ -1,5 +1,5 @@
 # workflow-designer-vue
-
+![示例图](https://raw.githubusercontent.com/zylking/workflow-designer-vue/main/src/assets/example.png)
 ## Project setup
 ```
 npm install
