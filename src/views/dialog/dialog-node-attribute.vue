@@ -159,65 +159,66 @@
               <i class="el-icon el-icon-s-claim"></i>
               <span>执行条件</span>
             </template>
-            <div>
-              <div class="condition-title">
-                <span>审批人员设置</span>
-                <el-button size="mini" type="primary" icon="el-icon-plus" :disabled="nodeConfig.approvers >= 3"
-                           @click="$refs.approver.showDialog()">添加
-                </el-button>
-              </div>
-              <el-table size="mini" :data="nodeConfig.approvers" border style="width: 100%">
-                <el-table-column type="index" label="#" width="40" align="center"></el-table-column>
-                <el-table-column prop="approverTypeName" label="审批类型" width="70"></el-table-column>
-                <el-table-column prop="conditionName" label="选择人员" show-overflow-tooltip></el-table-column>
-                <el-table-column prop="approverCondition" label="条件" width="60"></el-table-column>
-                <el-table-column label="操作" width="58">
-                  <template slot-scope="scope">
-                    <el-button size="mini" type="text" icon="el-icon-edit" title="编辑"
-                               @click="$refs.approver.showDialog(scope.row)"></el-button>
-                    <el-button size="mini" type="text" icon="el-icon-delete" title="删除"
-                               @click="deleteApprovers(scope)"></el-button>
-                  </template>
-                </el-table-column>
-              </el-table>
-              <div class="condition-title mt12">
-                <span>节点条件设置</span>
-                <el-button size="mini" type="primary" icon="el-icon-plus" @click="$refs.condition.showDialog()">添加
-                </el-button>
-              </div>
-              <el-table size="mini" :data="nodeConfig.nodeConditions" border style="width: 100%">
-                <el-table-column type="index" label="#" width="40" align="center"></el-table-column>
-                <el-table-column prop="name" label="条件名称"></el-table-column>
-                <el-table-column prop="compare" label="比较逻辑" width="70"></el-table-column>
-                <el-table-column prop="value" label="条件" width="70"></el-table-column>
-                <el-table-column label="操作" width="58">
-                  <template slot-scope="scope">
-                    <el-button size="mini" type="text" icon="el-icon-edit" title="编辑"
-                               @click="$refs.condition.showDialog(scope.row)"></el-button>
-                    <el-button size="mini" type="text" icon="el-icon-delete" title="删除"
-                               @click="deleteCondition(scope)"></el-button>
-                  </template>
-                </el-table-column>
-              </el-table>
+            <div>可保存节点的审批条件等</div>
+            <!--            <div>-->
+            <!--              <div class="condition-title">-->
+            <!--                <span>审批人员设置</span>-->
+            <!--                <el-button size="mini" type="primary" icon="el-icon-plus" :disabled="nodeConfig.approvers >= 3"-->
+            <!--                           @click="$refs.approver.showDialog()">添加-->
+            <!--                </el-button>-->
+            <!--              </div>-->
+            <!--              <el-table size="mini" :data="nodeConfig.approvers" border style="width: 100%">-->
+            <!--                <el-table-column type="index" label="#" width="40" align="center"></el-table-column>-->
+            <!--                <el-table-column prop="approverTypeName" label="审批类型" width="70"></el-table-column>-->
+            <!--                <el-table-column prop="conditionName" label="选择人员" show-overflow-tooltip></el-table-column>-->
+            <!--                <el-table-column prop="approverCondition" label="条件" width="60"></el-table-column>-->
+            <!--                <el-table-column label="操作" width="58">-->
+            <!--                  <template slot-scope="scope">-->
+            <!--                    <el-button size="mini" type="text" icon="el-icon-edit" title="编辑"-->
+            <!--                               @click="$refs.approver.showDialog(scope.row)"></el-button>-->
+            <!--                    <el-button size="mini" type="text" icon="el-icon-delete" title="删除"-->
+            <!--                               @click="deleteApprovers(scope)"></el-button>-->
+            <!--                  </template>-->
+            <!--                </el-table-column>-->
+            <!--              </el-table>-->
+            <!--              <div class="condition-title mt12">-->
+            <!--                <span>节点条件设置</span>-->
+            <!--                <el-button size="mini" type="primary" icon="el-icon-plus" @click="$refs.condition.showDialog()">添加-->
+            <!--                </el-button>-->
+            <!--              </div>-->
+            <!--              <el-table size="mini" :data="nodeConfig.nodeConditions" border style="width: 100%">-->
+            <!--                <el-table-column type="index" label="#" width="40" align="center"></el-table-column>-->
+            <!--                <el-table-column prop="name" label="条件名称"></el-table-column>-->
+            <!--                <el-table-column prop="compare" label="比较逻辑" width="70"></el-table-column>-->
+            <!--                <el-table-column prop="value" label="条件" width="70"></el-table-column>-->
+            <!--                <el-table-column label="操作" width="58">-->
+            <!--                  <template slot-scope="scope">-->
+            <!--                    <el-button size="mini" type="text" icon="el-icon-edit" title="编辑"-->
+            <!--                               @click="$refs.condition.showDialog(scope.row)"></el-button>-->
+            <!--                    <el-button size="mini" type="text" icon="el-icon-delete" title="删除"-->
+            <!--                               @click="deleteCondition(scope)"></el-button>-->
+            <!--                  </template>-->
+            <!--                </el-table-column>-->
+            <!--              </el-table>-->
 
-              <div class="mt6">
-                <el-checkbox v-model="nodeConfig.isSignature" true-label="1" false-label="0">允许加签</el-checkbox>
-              </div>
-              <div>
-                <el-checkbox v-model="nodeConfig.countersign.isCountersign" true-label="1" false-label="0">会签
-                </el-checkbox>
-              </div>
-              <div>
-                <el-input v-model="nodeConfig.countersign.proportion" size="mini" placeholder="会签比例"
-                          :disabled="nodeConfig.countersign.isCountersign === '0'">
-                  <template slot="append">%</template>
-                </el-input>
-              </div>
-              <div class="condition-title mt12">节点功能权限</div>
-              <el-checkbox-group v-model="nodeConfig.nodePoints" class="small-spacing">
-                <el-checkbox v-for="item in authorityOpts" :label="item.id" :key="item.id">{{item.name}}</el-checkbox>
-              </el-checkbox-group>
-            </div>
+            <!--              <div class="mt6">-->
+            <!--                <el-checkbox v-model="nodeConfig.isSignature" true-label="1" false-label="0">允许加签</el-checkbox>-->
+            <!--              </div>-->
+            <!--              <div>-->
+            <!--                <el-checkbox v-model="nodeConfig.countersign.isCountersign" true-label="1" false-label="0">会签-->
+            <!--                </el-checkbox>-->
+            <!--              </div>-->
+            <!--              <div>-->
+            <!--                <el-input v-model="nodeConfig.countersign.proportion" size="mini" placeholder="会签比例"-->
+            <!--                          :disabled="nodeConfig.countersign.isCountersign === '0'">-->
+            <!--                  <template slot="append">%</template>-->
+            <!--                </el-input>-->
+            <!--              </div>-->
+            <!--              <div class="condition-title mt12">节点功能权限</div>-->
+            <!--              <el-checkbox-group v-model="nodeConfig.nodePoints" class="small-spacing">-->
+            <!--                <el-checkbox v-for="item in authorityOpts" :label="item.id" :key="item.id">{{item.name}}</el-checkbox>-->
+            <!--              </el-checkbox-group>-->
+            <!--            </div>-->
           </el-collapse-item>
         </el-collapse>
       </el-main>
@@ -228,21 +229,21 @@
       </el-footer>
 
       <!-- 审批人员设置 -->
-      <form-approver ref="approver" @add="addApprovers" @update="updateApprovers"></form-approver>
+      <!--      <form-approver ref="approver" @add="addApprovers" @update="updateApprovers"></form-approver>-->
       <!-- 节点条件设置 -->
-      <form-condition ref="condition" @add="addCondition" @update="updateCondition"></form-condition>
+      <!--      <form-condition ref="condition" @add="addCondition" @update="updateCondition"></form-condition>-->
     </el-container>
   </el-drawer>
 </template>
 
 <script>
-  import {getNodeAuthority} from "@/api/designer";
-  import FormApprover from "./dialog-form-approver";
-  import FormCondition from "./dialog-form-condition";
+  // import {getNodeAuthority} from "@/api/designer";
+  // import FormApprover from "./dialog-form-approver";
+  // import FormCondition from "./dialog-form-condition";
 
   export default {
     name: "dialog-node-attribute",
-    components: {FormApprover, FormCondition},
+    // components: {FormApprover, FormCondition},
     model: {
       prop: 'nodeConfig'
     },
@@ -274,13 +275,6 @@
         // 功能权限选项
         authorityOpts: []
       };
-    },
-
-    created() {
-      getNodeAuthority({isNeedPage: false}).then(res => {
-        this.authorityOpts = res.data || [];
-      }).catch(() => {
-      });
     },
 
     methods: {

@@ -21,6 +21,7 @@
       return {
         // 节点类型
         // 'rect', 'circle', 'ellipse', 'diamond', 'triangle', 'star'
+        // 自定义字段：为业务需求字段，可自行根据业务进行对应的修改
         nodeTypes: [
           {type: 'rect', title: '矩形'},
           {type: 'circle', title: '圆'},
@@ -66,16 +67,16 @@
           },
           // 锚点数量和位置
           anchorPoints: [[0.5, 0], [1, 0.5], [0.5, 1], [0, 0.5]],
-          // 审批人员设置
+          // 自定义字段：审批人员设置
           approvers: [],
-          // 节点条件设置
+          // 自定义字段：节点条件设置
           nodeConditions: [],
-          // 会签
+          // 自定义字段：会签
           countersign: {
             isCountersign: '0',     // 是否会签（0否 1是）
             proportion: ''          // 会签比例
           },
-          // 节点功能权限
+          // 自定义字段：节点功能权限
           nodePoints: []
         },
 
