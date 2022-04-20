@@ -1,4 +1,5 @@
 # workflow-designer-vue
+看不见示例图片的朋友们，可以将example.png图片下载下来后查看
 ![示例图](https://github.com/zylking/workflow-designer-vue/blob/main/example.png)
 ## Project setup
 ```
